@@ -10,12 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_04_195426) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_05_024043) do
   create_table "authors", force: :cascade do |t|
     t.string "name"
-    t.string "site_url"
     t.text "bio"
-    t.date "birth_date"
+    t.string "birth_date"
     t.string "photo_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
