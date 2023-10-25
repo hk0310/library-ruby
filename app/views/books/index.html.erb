@@ -2,7 +2,7 @@
 <ul>
     <% @books.each do |book| %>
         <li>
-            <img src="<%= book.cover_image_url %>" width="65">
+            <img src="<%= book.cover_image_url.nil? ? "/images/no_cover.png": book.cover_image_url %>" width="65" alt="book-cover">
             <h3><%= link_to book.title, book %></h3>
             <h5>by <%= link_to book.authors[0].name, book.authors[0] %></h5>
         </li>
