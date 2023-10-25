@@ -1,0 +1,8 @@
+<h1><%= @book.title %></h1>
+
+<img src="<%= @book.cover_image_url %>">
+
+<h2>By <%= @book.authors[0].name %></h2>
+<p>ISBN: <%= @book.isbn %></p>
+<p>Published on <%= @book.published_date %>, <%= @book.page_count %> pages</p>
+<p><%= @book.synopsis %></p>
