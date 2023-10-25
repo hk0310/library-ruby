@@ -2,7 +2,12 @@
 
 <img src="<%= @book.cover_image_url %>">
 
-<h2>By <%= @book.authors[0].name %></h2>
+<h2>By <%= link_to @book.authors[0].name, @book.authors[0] %></h2>
 <p>ISBN: <%= @book.isbn %></p>
 <p>Published on <%= @book.published_date %>, <%= @book.page_count %> pages</p>
+<p>Genres: 
+<% @book.genres.each do |genre| %>
+    <%= link_to genre.name, genre %>,
+<% end %>
+</p>
 <p><%= @book.synopsis %></p>
