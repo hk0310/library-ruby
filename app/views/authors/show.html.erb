@@ -1,0 +1,16 @@
+<h1><%= @author.name %></h1>
+
+<img src="<%= @author.photo_url %>">
+
+<p>Birthday: <%= @author.birth_date %></p>
+<p><%= @author.bio %></p>
+<h3><%= @author.name %>'s <%= @books.count %> books: </h3>
+<ul>
+    <% @books.each do |book| %>
+        <li>
+            <img src="<%= book.cover_image_url %>" width="65">
+            <h3><%= link_to book.title, book %></h3>
+            <h5>by <%= book.authors[0].name %></h5>
+        </li>
+    <%end%>
+</ul>

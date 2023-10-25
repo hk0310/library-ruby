@@ -2,5 +2,5 @@ Rails.application.routes.draw do
   root to: "books#index"
 
   resources :books, only: %i[index show]
-  # root "articles#index"
+  resources :authors, only: %i[index show]
 end
