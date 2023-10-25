@@ -11,6 +11,13 @@
   </head>
 
   <body>
+    <nav>
+      <ul>
+        <li><%= link_to "Books", root_path %></li>
+        <li><%= link_to "Authors", authors_path %></li>
+        <li><%= link_to "Genres", genres_path %></li>
+      </ul>
+    </nav>
     <%= yield %>
   </body>
 </html>
