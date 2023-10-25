@@ -1,0 +1,11 @@
+<h1><%= @genre.name %></h1>
+
+<ul>
+    <% @books.each do |book| %>
+        <li>
+            <img src="<%= book.cover_image_url.nil? ? "/images/no_cover.png": book.cover_image_url %>" width="65" alt="book-cover">
+            <h3><%= link_to book.title, book %></h3>
+            <h5>by <%= book.authors[0].name %></h5>
+        </li>
+    <%end%>
+</ul>

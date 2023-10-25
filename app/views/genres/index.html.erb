@@ -1,0 +1,9 @@
+<h1>Genres</h1>
+<ol>
+    <% @genres.each do |genre| %>
+        <li>
+            <h3><%= link_to genre.name, genre %></h3>
+            <p><%= genre.books.count %> Books</p>
+        </li>
+    <%end%>
+</ol>
