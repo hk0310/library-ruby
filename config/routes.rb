@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :genres, only: %i[index show]
 
   get "/about-us" => "pages#about-us"
+  get 'search_results', to: 'search#results', as: 'search_results'
 end
