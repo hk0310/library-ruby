@@ -19,6 +19,11 @@
         <li><%= link_to "About Us", about_us_path%></li>
       </ul>
     </nav>
+    <%= form_tag(search_results_path, method: "get") do %>
+      <%= label_tag(:q, "Search:") %>
+      <%= text_field_tag(:q) %>
+      <%= submit_tag("Search")%>
+    <% end %>
     <%= yield %>
   </body>
 </html>
