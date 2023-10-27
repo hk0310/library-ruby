@@ -22,6 +22,11 @@
     <%= form_tag(search_results_path, method: "get") do %>
       <%= label_tag(:q, "Search:") %>
       <%= text_field_tag(:q) %>
+      
+
+      <%= label_tag(:author, "Filter:") %>
+      <%= select_tag(:author, options_for_select(Author.all.collect { |c| [c.name, c.id] }, params[:author]), include_blank: true) %>
+
       <%= submit_tag("Search")%>
     <% end %>
     <%= yield %>
