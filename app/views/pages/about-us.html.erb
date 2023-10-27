@@ -1,0 +1,19 @@
+<h1>About Us</h1>
+
+<h2>Dataset Description</h2>
+
+<p>For this data project, I have chosen the Open Library API to seed my database. The API contains information on books, authors, and genres. The purpose of this data project is to build a library-esque site using Ruby on Rails.</p>
+
+<h3>Endpoints</h3>
+<ul>
+    <li><a href="https://openlibrary.org/works/OL45804W.json">Works API</a>: Containing general information on books</li>
+    <li><a href="https://openlibrary.org/books/OL7353617M.json">Editions API</a>: Containing specific information on a specific edition</li>
+    <li><a href="https://openlibrary.org/authors/OL23919A.json">Author API</a>: Containing information on authors</li>
+    <li><a href="https://covers.openlibrary.org/b/isbn/0385472579-S.jpg">Covers API</a>: Containing book covers</li>
+</ul>
+
+<h3>Relationship</h3>
+<p>The Author endpoint is called first to retrieve general data on the authors. Then, a call is made to the Works API to get the first 50 works written by the author. General information on the books such as titles and genres is captured here. After that, another call is made to the Editions API to get the more specific information on the book such as ISBN, page count, and publish date. There will be calls to the Covers API anytime an image is displayed, whether for an author, or a book.</p>
+
+<h2>ERD</h2>
+<img src="/images/ERD.jpg" alt="ERD">

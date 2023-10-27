@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :books, only: %i[index show]
   resources :authors, only: %i[index show]
   resources :genres, only: %i[index show]
+
+  get "/about-us" => "pages#about-us"
 end
