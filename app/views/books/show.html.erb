@@ -2,7 +2,7 @@
 
 <img src="<%= @book.cover_image_url.nil? ? "/images/no_cover.png": @book.cover_image_url %>" alt="book-cover">
 
-<h2>By <%= link_to @book.authors[0].name, @book.authors[0] %></h2>
+<h2>By <i><%= link_to @book.authors[0].name, @book.authors[0] %></i></h2>
 <p>ISBN: <%= @book.isbn %></p>
 <p>Published on <%= @book.published_date %>, <%= @book.page_count %> pages</p>
 <p>Genres: 
